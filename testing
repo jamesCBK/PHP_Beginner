@@ -1,0 +1,26 @@
+<?php
+$node_test = array("AC"=>array("current"=>45,"voltage"=>66),
+"UPS"=>array("current"=>45,"voltage"=>66));
+
+$size_of_node = sizeof($node_test);
+
+
+
+function traverse_test($arrays,$no){
+  $html_table = '<table border="1" cellspacing="0" cellpadding="2"><tr>';
+  $nr_col = 2; 
+foreach($arrays as $key=>$value)
+{
+foreach($value as $keys=>$values)
+{
+$html_table .= '<td>' .$keys. ' - '. $values. '</td>'; 
+  $i++;
+$col_to_add = $i % $nr_col;
+  if($col_to_add == 0) { $html_table .= '</tr><tr>'; }
+  }
+}
+
+$html_table .= '</tr></table>';  
+}
+traverse_test($node_test,$size_of_node);
+?>
