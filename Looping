@@ -1,0 +1,10 @@
+//looping with cell color. 
+foreach($caption as $outer_row=>$valuess){
+   foreach($valuess as $keyss){
+   if($keyss == "Appliances"){
+   $Table_Construct.='<td style="background-color:#FF0">' . '<font face="Arial, Helvetica, sans-serif">' . $keyss . '</font>' . '</td>';
+   }
+   else
+   {
+   $Table_Construct.="<th>".$keyss."</th>"; }
+   } 
